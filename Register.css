@@ -68,6 +68,10 @@
     font-size: 22px;
 }
 
+input:checked{
+    accent-color: rgb(0, 113, 255);
+}
+
 .right p{
     margin-left: 100px;
     margin-top: 10px;

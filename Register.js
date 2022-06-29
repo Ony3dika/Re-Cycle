@@ -70,7 +70,9 @@ function ell(e){
 
     let six=document.createElement("td")
 
-    six.textContent=gender.checked.value
+    let radio=document.querySelector('input[type=radio][name=gender]:checked');
+
+    six.textContent=radio.value
 
     six.id=("six")
 
@@ -103,7 +105,7 @@ function ell(e){
         num:phone.value,
         email:mail.value,
         date:DOB.value,
-        gen:gender.value
+        gen:radio.value
     }
 
     let newdata=people
@@ -122,7 +124,6 @@ function ell(e){
     }
 }
 
-
 //Refresh
 
 function reload(){
@@ -132,83 +133,72 @@ function reload(){
         area=JSON.parse(localStorage.getItem('people'))
     }   
 
-    let row=document.createElement("tr")
-
-    let one=document.createElement("td")
-
     //Fname
 
-    one.textContent=localStorage.getItem('people.')
+    area.forEach(function(king){
 
-    one.id=("one")
+        let row=document.createElement("tr")
 
-    row.appendChild(one)
+        let one=document.createElement("td")
 
-    //Lname
+        one.textContent=king.first
 
-    let two=document.createElement("td")
+        one.id=("one")
 
-    two.textContent=last.value
+        row.appendChild(one)
 
-    two.id=("two")
+        //Lname
 
-    row.appendChild(two)
+        let two=document.createElement("td")
 
-    //Phone
+        two.textContent=king.last
 
-    let three=document.createElement("td")
+        two.id=("two")
 
-    three.textContent=phone.value
+        row.appendChild(two)
 
-    three.id=("three")
+        //Phone
 
-    row.appendChild(three)
+        let three=document.createElement("td")
 
-    //Mail
+        three.textContent=king.num
 
-    let four=document.createElement("td")
+        three.id=("three")
 
-    four.textContent=mail.value
+        row.appendChild(three)
 
-    four.id=("four")
+        //Mail
 
-    row.appendChild(four)
+        let four=document.createElement("td")
 
-    //Gender
+        four.textContent=king.email
 
-    let six=document.createElement("td")
+        four.id=("four")
 
-    six.textContent=gender.checked.value
+        row.appendChild(four)
 
-    six.id=("six")
+        //Gender
 
-    row.appendChild(six)
+        let six=document.createElement("td")
 
-    //Birth
+        six.textContent=king.gen
 
-    let five=document.createElement("td")
+        six.id=("six")
 
-    five.textContent=DOB.value
+        row.appendChild(six)
 
-    five.id=("five")
+        //Birth
 
-    row.appendChild(five)
+        let five=document.createElement("td")
 
-    table.appendChild(row)
+        five.textContent=king.date
 
+        five.id=("five")
+
+        row.appendChild(five)
+
+        table.appendChild(row)
+
+    })
 
 }
-
-
-
-// let radiobtns=document.querySelectorAll('input[name="gender"]')
-
-// function show(){
-//     let selected=document.querySelector("input[name='gender']:checked");
-//     console.log(selected)
-// }
-
-// radiobtns.forEach(function(btn){
-//     radiobtns.addEventListener("change", show)
-// })
-
