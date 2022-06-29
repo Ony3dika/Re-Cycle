@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Re-Cycle : Register</title>
+    <link rel="stylesheet" href="Register.css">
+</head>
+<body>
+    <div class="main">
+        
+        <div class="cen">
+            <div class="left">
+                <h1>Re - Cycle</h1>
+
+                <p>You're a few steps away from <br> creating your "ReC" Profile</p>
+
+                <img src="./bicycle-png-45192 - Copy.png" alt="">
+            </div>
+
+            <div class="right">
+                <h1>Register</h1>
+                
+                <h2>Create your Profile</h2>
+
+                <p>Let's get you all set up so that <br> you can get ready to trade your bikes :)</p>
+
+                <form action="">
+                    <input type="text" placeholder="Firstname" style="margin-left: 100px;" id="firstname">
+
+                    <input type="text" placeholder="Lastname" id="lastname">
+
+                    <input type="number" placeholder="Phone Number" style="margin-left: 100px;" id="phone">
+
+                    <input type="email" placeholder="Email Address" id="email">
+
+                    <input type="password" placeholder="Password" style="margin-left: 100px;" id="password">
+
+                    <input type="password" placeholder="Confirm Password">
+
+                    <input type="date" placeholder="Date of Birth" style="margin-left: 100px;" id="date">
+
+                    <br>
+
+                    <label for="" style="margin-left: 100px; font-size: 20px;padding-top: 20px;display: block;color: rgb(96, 96, 96);" >Gender</label>
+
+                    <br>
+
+                    <label for="gender" style="margin-left: 100px; font-size: 20px;margin-top:5px;display: block;color: rgb(96, 96, 96);">Male</label>
+                    
+                    <input type="radio" name="gender" id="gender" value="male" style="margin-left: -50px;">
+
+                    <label for="gender" style="font-size: 20px;margin-top: -115px;display:block;position: absolute; color: rgb(96, 96, 96);margin-left: 300px;">Female</label>
+                    
+                    
+                    <input type="radio" name="gender" id="gender" value="female" style="margin-left: -170px;">
+
+                    <br>
+
+                    <input type="submit" value="Create Account" style="margin-left: 300px;background-color:  rgb(0, 113, 255);color: white; border: none; width: 250px;padding-left: 0px;font-size: 22px;" id="account">
+
+                </form>
+            </div>
+        </div>
+
+
+        <table id="table">
+           <thead>
+                <tr>
+                    <th>Firstname</th>
+                    <th>Lastname</th>
+                    <th>Phone Number</th>
+                    <th>Email</th>
+                    <th>Gender</th>
+                    <th>Date Of Birth</th>
+                </tr>
+           </thead>
+
+           
+        </table>
+
+    </div>
+<script src="./Register.js"></script>
+</body>
+</html>
